@@ -38,7 +38,7 @@ unknown_member as (
         'N/A' as product_code, 
         'N/A' as product_description, 
         null::numeric as unit_price,
-        false as is_discontinued, 
+        'false' as is_discontinued, 
         'N/A' as unit_of_measure_code, 
         'N/A' as unit_of_measure_name,
         'N/A' as subcategory_name, 
