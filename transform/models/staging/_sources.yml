@@ -3,9 +3,21 @@ sources:
   - name: raw
     schema: raw
     tables:
+      - name: payment_types
+      - name: countries
+      - name: provinces
+      - name: cities
+      - name: addresses
       - name: products
-      - name: product_departments
-      - name: product_categories
       - name: product_subcategories
+      - name: product_categories
+      - name: product_departments
       - name: units_of_measure
       - name: customers
+      - name: employees
+      - name: promotions
+      - name: orders
+      - name: order_lines
+      - name: package_types
+      - name: stores
+      - name: inventory_transactions
