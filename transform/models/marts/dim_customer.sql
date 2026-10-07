@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 
-with c     as ( select * from {{ ref('stg_oltp_customers') }} ),
+with c as ( select * from {{ ref('stg_oltp_customers') }} ),
     loc as ( select address_id, location_key from {{ ref('dim_location') }} ),
 
 joined as (
@@ -19,18 +19,7 @@ final as (
 ),
 
 unknown_member as (
-    select 
-        '-1' as customer_key, 
-        -1 as customer_id, 
-        'Desconocido' as first_name, 
-        'N/A' as last_name, 
-        'N/A' as full_name, 
-        'N/A' as title, 
-        'N/A' as phone_number, 
-        'N/A' as email, 
-        'N/A' as delivery_address_id, 
-        '-1' as delivery_location_key, 
-        '-1' as billing_location_key
+    select '-1' as customer_key, -1 as customer_id, 'Desconocido' as first_name, 'N/A' as last_name, 'N/A' as full_name, 'N/A' as title, 'N/A' as phone_number, 'N/A' as email, '-1', '-1'
 )
 
 select * from final
