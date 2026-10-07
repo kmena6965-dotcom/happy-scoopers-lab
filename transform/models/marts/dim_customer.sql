@@ -19,7 +19,18 @@ final as (
 ),
 
 unknown_member as (
-    select '-1' as customer_key, -1 as customer_id, 'Desconocido','N/A','N/A','N/A','N/A','N/A','N/A','-1','-1'
+    select 
+        '-1' as customer_key, 
+        -1 as customer_id, 
+        'Desconocido' as first_name, 
+        'N/A' as last_name, 
+        'N/A' as full_name, 
+        'N/A' as title, 
+        'N/A' as phone_number, 
+        'N/A' as email, 
+        'N/A' as delivery_address_id, 
+        '-1' as delivery_location_key, 
+        '-1' as billing_location_key
 )
 
 select * from final
