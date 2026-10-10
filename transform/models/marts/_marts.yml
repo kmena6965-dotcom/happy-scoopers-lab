@@ -36,3 +36,8 @@ models:
     columns:
     - name: customer_key
       data_tests: [unique, not_null]
+
+  - name: dim_promotion
+    columns:
+    - name: promotion_key
+      data_tests: [unique, not_null]
