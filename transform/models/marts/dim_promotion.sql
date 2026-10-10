@@ -7,7 +7,12 @@ with p as (
 final as (
     select 
         {{ dbt_utils.generate_surrogate_key(['promotion_id']) }} as promotion_key, 
-        *
+        promotion_id,
+        deal_description,
+        start_date,
+        end_date,
+        discount_amount,
+        discount_percentage
     from p
 ),
 
